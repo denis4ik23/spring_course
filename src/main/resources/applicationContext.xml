@@ -10,15 +10,17 @@
     <context:property-placeholder location="classpath:musicPlayer.properties"/>
 
     <bean id="musicBean"
-          class="com.denis4ik23.spring_course.ClassicalMusic">
+          class="com.denis4ik23.spring_course.ClassicalMusic"
+          init-method="doMyInit"
+          destroy-method="doMyDestroy">
     </bean>
 
-    <bean id="musicPlayer"
+    <!--bean id="musicPlayer"
           class="com.denis4ik23.spring_course.MusicPlayer"
           scope="prototype">
         <property name="music" ref="musicBean"/>
         <property name="name" value="${musicPlayer.name}"/>
         <property name="volume" value="${musicPlayer.volume}"/>
-    </bean>
+    </bean-->
 
 </beans>
