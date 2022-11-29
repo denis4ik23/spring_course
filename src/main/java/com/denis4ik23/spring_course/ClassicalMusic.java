@@ -1,13 +1,10 @@
 package com.denis4ik23.spring_course;
 
-public class ClassicalMusic implements Music {
-    public void doMyInit() {
-        System.out.println("Doing my initialization");
-    }
+import org.springframework.stereotype.Component;
 
-    public void doMyDestroy() {
-        System.out.println("Doing my destruction");
-    }
+@Component
+public class ClassicalMusic implements Music {
+
     @Override
     public String getSong() {
         return "Классическая музыка";
