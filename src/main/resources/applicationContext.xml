@@ -9,4 +9,6 @@
 
     <context:component-scan base-package="com.denis4ik23.spring_course"/>
 
+    <context:property-placeholder location="classpath:musicPlayer.properties"/>
+
 </beans>
